@@ -22,10 +22,7 @@ int	format_string(const char *str)
 	int	i;
 
 	if (!str)
-	{
-		format_string("(null)");
-		return (6);
-	}
+		return (format_string("(null)"));
 	i = 0;
 	while (str[i])
 	{
