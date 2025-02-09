@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   formatter.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkonte <hkonte@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -30,7 +30,7 @@ int	format_conversion(void *arg, char c, va_list args)
 	{
 		arg = va_arg(args, void *);
 		if (!arg)
-			return (write(1, "(nil)", 5));
+			return (format_string("(nil)"));
 		return (format_string("0x")
 			+ format_pointer(arg, BASE_HEX, 16));
 	}
