@@ -11,10 +11,6 @@
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
-#define BASE_OCT "01234567"
-#define BASE_DEC "0123456789"
-#define BASE_HEX "0123456789abcdef"
-#define BASE_HEX_UPPER "0123456789ABCDEF"
 
 int	format_conversion(void *arg, char c, va_list args)
 {
