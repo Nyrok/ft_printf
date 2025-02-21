@@ -36,7 +36,7 @@ int	format_conversion(void *arg, char c, va_list args)
 	}
 	else if (c == 'o')
 		return (format_base(va_arg(args, unsigned int), BASE_OCT, 8));
-	else if (c == '%')
-		return (format_char('%'));
+	else if (c == '%' || c == ' ')
+		return (format_char(c));
 	return (0);
 }
